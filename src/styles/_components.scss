@@ -1,0 +1,123 @@
+//Textinput
+.inputContainer {
+  width: 315px;
+  height: 40px;
+  padding: 5px;
+}
+.boxInput {
+  border: 1.5px solid $disabledColor;
+  border-radius: 8px;
+}
+.underlineInput {
+  border-bottom: 1.5px solid $primaryColor;
+}
+.errorInput {
+  border-color: red;
+}
+
+.underlineIcon {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+//Button
+.forwardBtn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: $primaryColor;
+}
+
+.forwardIcon {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.btnDisabled {
+  cursor: not-allowed;
+  background-color: $disabledColor;
+}
+
+//dropdown
+.dropdownContainer {
+  padding-block: 5px;
+  padding-inline: 10px;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  width: 315px;
+  height: 40px;
+  background-color: white;
+}
+
+.dropdownMenu {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.dropdownView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+.dropdownItem {
+  margin: 0;
+  padding-block: 5px;
+  padding-inline: 10px;
+}
+.dropdownItem-active {
+  color: white;
+  background-color: $primaryColor;
+  border-radius: 5px;
+}
+.dropdownTextContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdownText-active {
+  color: white;
+}
+//checkbox
+.checkboxContainer {
+  height: 80px;
+  width: 315px;
+  border-radius: 8px;
+  padding: 10px 20px 10px 20px;
+  border: 1.5px solid $greyColor;
+  overflow: hidden;
+  cursor: pointer;
+}
+.checkboxActive {
+  background-color: $greyColor;
+}
+.checkboxContent {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+//modal
+.modalContainer {
+  background-color: white;
+  border-radius: 24px;
+  height: 170px;
+}
+.ant-modal-content {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.modalButton {
+  cursor: pointer;
+  padding: 5px 20px 5px 20px;
+}

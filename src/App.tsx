@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.less";
+import "./styles/index.scss";
+import Components from "./pages/components";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  RouteComponentProps,
+} from "react-router-dom";
+import logging from "./config/logging";
+import routes from "./config/routes";
+interface Props {}
 
-function App() {
+const App = (props: Props) => {
+  React.useEffect(() => {
+    logging.info("Loading Application");
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Switch>
+          {routes.map((route, index) => {
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                render={(props: RouteComponentProps<any>) => (
+                  <route.commponent
+                    {...props}
+                    {...route.props}
+                    name={route.name}
+                  />
+                )}
+              />
+            );
+          })}
+        </Switch>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
